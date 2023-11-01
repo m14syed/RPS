@@ -1,6 +1,9 @@
 import sys
 import random
 
+print(title("Welcome to the RockPaperScissors Game!"))
+
+
 userchoice = input("Please input Rock, Paper or, Scissors: \n")
 
 if userchoice != 'Rock' and userchoice != 'Paper' and userchoice !='Scissors':
