@@ -1,15 +1,15 @@
 import sys
 import random
 
-print(str.title("\nWelcome to the RockPaperScissors Game!\n\n"))
-
-playagain = True
-
-while playagain:
+def RPSgame():
+    print(str.title("\nWelcome to the RockPaperScissors Game!\n======================================\n"))
+    
     userchoice = input("Please input Rock, Paper or, Scissors: \n")
 
     if userchoice != 'Rock' and userchoice != 'Paper' and userchoice !='Scissors':
-        sys.exit("Error: Please enter one of the available choices\n")
+        print("Error: Please enter one of the available choices\n")
+        return RPSgame()
+    
     print("\nYou have selected " + userchoice + ".")
 
     choices = ['Rock', 'Paper','Scissors']
@@ -26,7 +26,11 @@ while playagain:
         print('\nYou have tied 😒\n')
     else:
         print("\nYou have won! 😊\n")
+
+    playagain = input("Input E to exit the game or C keep playing\n").upper()
+    if playagain == 'E':
+        sys.exit("Thank you for Playing, Bye! 👋")
+    else:
+        return RPSgame()
     
-    playagain = input("Input stop to exit the game or press any key to keep playing\n")
-    if playagain == 'stop':
-        playagain = False
+RPSgame()
