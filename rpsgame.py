@@ -11,6 +11,7 @@ def RPS():
     userwins = 0
 
     def RPSgame():
+        nonlocal pywins, userwins, gamecount
         userchoice = input("Please input Rock, Paper or, Scissors: \n")
 
         if userchoice != 'Rock' and userchoice != 'Paper' and userchoice !='Scissors':
@@ -25,7 +26,6 @@ def RPS():
 
         if cpuchoice == 'Paper' and userchoice == 'Rock':
             print('\nYou have lost... 🥲\n')
-            nonlocal pywins, userwins
             pywins += 1
             print ('Python has', str(pywins), 'wins', '\nUser has', str(userwins), 'wins')
         elif cpuchoice == 'Rock' and userchoice == 'Scissors':
@@ -44,7 +44,6 @@ def RPS():
             userwins += 1
             print ('Python has', str(pywins), 'wins', '\nUser has', str(userwins), 'wins')
        
-        nonlocal gamecount
         gamecount += 1
         print('Game Count:', str(gamecount), '\n')
 
