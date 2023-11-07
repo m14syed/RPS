@@ -38,10 +38,11 @@ def choosenumber():
 
         playagain = input("Input E to exit the game or C keep playing\n").upper()
         if playagain == 'E':
-            sys.exit("Thank you for Playing, Bye! 👋")
+            sys.exit ("Bye!")
         else:
             return CNgame()
 
     return CNgame()
 
-choosenumber()
+if __name__ == "__main__":
+    choosenumber()

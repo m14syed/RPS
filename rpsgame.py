@@ -55,4 +55,5 @@ def RPS():
 
     return RPSgame()
 
-RPS()
+if __name__ == "__main__":
+    RPS()
