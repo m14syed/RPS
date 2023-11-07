@@ -48,10 +48,13 @@ def RPS():
         print('Game Count:', str(gamecount), '\n')
 
         playagain = input("Input E to exit the game or C keep playing\n").upper()
-        if playagain == 'E':
-            sys.exit("Thank you for Playing, Bye! 👋")
-        else:
+        if playagain == 'C':
             return RPSgame()
+        else:
+            if __name__ == "__main__":
+                sys.exit("Thank you for Playing, Bye! 👋")
+            else:
+                return
 
     return RPSgame()
 
