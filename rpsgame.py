@@ -1,14 +1,16 @@
 import sys
 import random
+from termcolor import colored
 
 def RPS():
+    title = str.title("\nWelcome to the RockPaperScissors Game!\n======================================\n")
+    print(colored(title,'green', attrs=['bold']))
+
     gamecount = 0
     pywins = 0
     userwins = 0
 
     def RPSgame():
-        print(str.title("\nWelcome to the RockPaperScissors Game!\n======================================\n"))
-        
         userchoice = input("Please input Rock, Paper or, Scissors: \n")
 
         if userchoice != 'Rock' and userchoice != 'Paper' and userchoice !='Scissors':
@@ -36,6 +38,7 @@ def RPS():
             print ('Python has', str(pywins), 'wins', '\nUser has', str(userwins), 'wins')
         elif cpuchoice == userchoice:
             print('\nYou have tied 😒\n')
+            print ('Python has', str(pywins), 'wins', '\nUser has', str(userwins), 'wins')
         else:
             print("\nYou have won! 😊\n")
             userwins += 1
